@@ -282,18 +282,22 @@ Write a SQL query to Retrieve the medications with dosages equal to the lowest d
 Table Name: Medications (attributes: medication_id, medication_name, dosage)
 
 ![Screenshot 2025-05-14 104754](https://github.com/user-attachments/assets/70e9106e-1e88-47b7-8f3f-6043681ca0d5)
-
-**Output:**
-
+~~~
 SELECT *
 FROM Medications
 WHERE dosage = (SELECT Min(dosage)FROM Medications);
+~~~
+
+**Output:**
+
+![Screenshot 2025-05-14 105519](https://github.com/user-attachments/assets/118f7952-a7d9-46b7-80ec-32bdaeaa3154)
 
 **Question 10**
-~~~
+
 Write a SQL query to retrieve all columns from the CUSTOMERS table for customers whose Address as Delhi
 
 Sample table: CUSTOMERS
+~~~
 
 ID          NAME        AGE         ADDRESS     SALARY
 ----------  ----------  ----------  ----------  ----------
