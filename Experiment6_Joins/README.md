@@ -69,6 +69,12 @@ ATTRIBUTES - doctor_id, first_name, last_name, specialization
 
 ![Screenshot 2025-05-14 131011](https://github.com/user-attachments/assets/55df11e3-8d45-46c9-8a6d-42bd4a34fbe4)
 
+~~~
+SELECT p.first_name as "patient_name",d.first_name as "doctor_name"
+FROM patients p
+INNER JOIN DOCTORS d on p.doctor_id = d.doctor_id
+WHERE p.date_of_birth > "1990-01-01";
+~~~
 
 **Output:**
 
@@ -95,6 +101,7 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70012       250.45      2012-06-27  3008         5002
 70011       75.29       2012-08-17  3003         5007
 70013       3045.6      2012-04-25  3002         5001
+
 Sample table: customer
 
  customer_id |   cust_name    |    city    | grade | salesman_id 
@@ -140,6 +147,7 @@ Sample table: customer
         3009 | Geoff Cameron  | Berlin     |   100 |        5003
         3003 | Jozy Altidor   | Moscow     |   200 |        5007
         3001 | Brad Guzan     | London     |       |        5005
+
 Sample table: orders
 
 ord_no      purch_amt   ord_date    customer_id  salesman_id
@@ -156,6 +164,7 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70012       250.45      2012-06-27  3008         5002
 70011       75.29       2012-08-17  3003         5007
 70013       3045.6      2012-04-25  3002         5001
+
 Sample table: salesman
 
  salesman_id |    name    |   city   | commission 
@@ -195,30 +204,23 @@ ATTRIBUTES - patient_id, first_name, last_name, date_of_birth, admission_date, d
 
 ![Screenshot 2025-05-14 135711](https://github.com/user-attachments/assets/6b7bf182-85f8-46b9-8dc9-a36160a7e9ab)
 
-
 DOCTORS TABLE:
 
 ATTRIBUTES - doctor_id, first_name, last_name, specialization
 
 ![Screenshot 2025-05-14 135716](https://github.com/user-attachments/assets/0a7674bc-55e8-4609-9d23-ba21b199b456)
-
-
-
-
+~~~
 SELECT p.first_name AS patient_name  
 FROM patients p  
 INNER JOIN doctors d ON p.doctor_id = d.doctor_id  
 WHERE d.first_name = 'Emily' 
   AND d.last_name = 'Johnson' 
   AND p.discharge_date IS NOT NULL;
-
+~~~
 
 **Output:**
 
-
 ![image](https://github.com/user-attachments/assets/0dcfab10-b205-4385-ab77-624519698090)
-
-
 
 **Question 5**
 
@@ -240,6 +242,7 @@ ord_no      purch_amt   ord_date    customer_id  salesman_id
 70012       250.45      2012-06-27  3008         5002
 70011       75.29       2012-08-17  3003         5007
 70013       3045.6      2012-04-25  3002         5001
+
 Sample table: customer
 
  customer_id |   cust_name    |    city    | grade | salesman_id 
@@ -252,6 +255,7 @@ Sample table: customer
         3009 | Geoff Cameron  | Berlin     |   100 |        5003
         3003 | Jozy Altidor   | Moscow     |   200 |        5007
         3001 | Brad Guzan     | London     |       |        5005
+
 Sample table : salesman
 
  salesman_id |    name    |   city   | commission 
@@ -300,6 +304,7 @@ Sample table: customer
         3009 | Geoff Cameron  | Berlin     |   100 |        5003
         3003 | Jozy Altidor   | Moscow     |   200 |        5007
         3001 | Brad Guzan     | London     |       |        5005
+
 Sample table: salesman
 
  salesman_id |    name    |   city   | commission 
@@ -392,6 +397,7 @@ Sample table: customer
         3009 | Geoff Cameron  | Berlin     |   100 |        5003
         3003 | Jozy Altidor   | Moscow     |   200 |        5007
         3001 | Brad Guzan     | London     |       |        5005
+
 Sample table: orders
 
 ord_no      purch_amt   ord_date    customer_id  salesman_id
